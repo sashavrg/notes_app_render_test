@@ -20,13 +20,14 @@ let notes = [
   },
   {
     id: '4',
-    content: 'this note should e deleted',
+    content: 'this note should be deleted',
     important: true
   }
 ]
 
 //middleware
 app.use(cors())
+app.use(express.static('dist'))
 app.use(express.json())
 
 app.get('/', (request, response) => {
